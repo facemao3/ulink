@@ -1,0 +1,544 @@
+﻿/*----------------------------------------------------------
+The base color for this template is #5c87b2. If you'd like
+to use a different color start by replacing all instances of
+#5c87b2 with your new color.
+----------------------------------------------------------*/
+body
+{
+    /*background-color: #5c87b2; */
+    font-size: 12px;
+    font-family: Verdana, Helvetica, Sans-Serif;
+    margin: 0;
+    padding: 0;
+    color: #696969;
+}
+
+a:link
+{
+    color: #1A8BC8;
+    text-decoration: none;
+}
+a:visited
+{
+    color: #1A8BC8;
+    text-decoration: none;
+}
+a:hover
+{
+    color: #F06E10;
+    text-decoration: none;
+}
+a:active
+{
+    color: #90B147;
+}
+
+p, ul
+{
+    margin-bottom: 20px;
+    line-height: 1.6em;
+}
+
+/* HEADINGS   
+----------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1
+{
+    font-size: 2em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+h2
+{
+    border-bottom: 1px solid #5c87b2;
+    padding: 0 0 10px 0;
+}
+h3
+{
+    font-size: 1.2em;
+}
+h4
+{
+    font-size: 1.1em;
+}
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0;
+}
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+/* you can specify a greater or lesser percentage for the 
+page width. Or, you can specify an exact pixel width. */
+.page
+{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header
+{
+    background: url('../Views/Images/topbg.gif') no-repeat;
+    height: 49px;
+    font-family: "Lucida Console";
+    font-weight: bold;
+    color: #7C8EB7;
+    font-size: 16px;
+    padding-left: 60px;
+    padding-top:20px;
+    width:640px;
+}
+
+p#logo, h1#logo
+{
+    font-weight: bold;
+    font-size: 24px !important;
+    padding: 10px 0;
+    margin: 0;
+    color: #FFF;
+    border: none;
+    line-height: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#logo a
+{
+    color: #FFF;
+    text-decoration: none;
+    font-size: 32px !important;
+}
+
+#mainContent
+{
+    padding: 30px 30px 15px 30px;
+    background-color: #FFF;
+    border-bottom: 3px groove #4b6f92;
+    margin-bottom: 30px;
+    _height: 1px; /* only IE6 applies CSS properties starting with an underscrore */
+}
+
+.columnsContainer
+{
+    position: relative;
+}
+
+.leftColumn
+{
+    width: 70%;
+    margin-right: 4%;
+    float: left;
+}
+
+.rightColumn
+{
+    float: right;
+    width: 25%;
+}
+
+#footer
+{
+    color: #999;
+    padding: 5px 0 0 0;
+    border-top: 1px solid #5C87B2;
+    text-align: center;
+    line-height: normal;
+}
+
+#footer p
+{
+    padding: 5px 0;
+    margin: 0;
+}
+
+/* navigate  
+----------------------------------------------------------*/
+#navigate
+{
+	float:right;
+	margin-top:-18px;
+}
+#navigate span a
+{
+	background-color:#E8EEF4;
+	border:1px solid #E8EEF4;
+	font-size:12px;
+	line-height:normal;
+	padding:5px;
+	text-decoration:none;
+	font-weight:normal;
+	width:38px;
+}
+#navigate span a:hover
+{
+	background-color:#FFFFFF;
+	border-color:#5C87B2;
+	text-decoration:none;
+}
+
+/* MAIN MENU   
+----------------------------------------------------------*/
+ul#mainMenu
+{
+    border-bottom: 1px #5C87B2 solid;
+    padding: 0 0 2px;
+    position: relative;
+    margin: 0;
+    text-align: right;
+}
+
+ul#mainMenu li
+{
+    display: inline;
+    list-style: none;
+}
+
+ul#mainMenu li a
+{
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 2.8em;
+    background-color: #e8eef4;
+    color: #034af3;
+}
+
+ul#mainMenu li a:hover
+{
+    background-color: #FFF;
+    text-decoration: none;
+}
+
+ul#mainMenu li a:active
+{
+    background-color: #90B147;
+    text-decoration: none;
+}
+
+ul#mainMenu li.selected a
+{
+    background-color: #FFF;
+    color: #000;
+}
+
+/* SIDE COLUMN LINKS & HEADINGS  
+----------------------------------------------------------*/
+.rightColumn ul
+{
+    margin: 0;
+    padding: 0 0 30px 0;
+}
+
+.rightColumn ul li
+{
+    list-style: none;
+    margin-top: 5px;
+    line-height: normal;
+}
+
+.rightColumn ul li a
+{
+    list-style: none;
+    padding: 5px;
+    border: 1px solid #e8eef4;
+    line-height: normal;
+    display: block;
+    text-decoration: none;
+    background-color: #e8eef4;
+    font-size: 12px;
+    _height: 1px; /* only IE6 applies CSS properties starting with an underscrore */
+}
+
+.rightColumn ul li a:hover
+{
+    text-decoration: none;
+    background-color: #FFF;
+    border-color: #e2e7ed;
+}
+
+.rightColumn ul li a:active
+{
+    text-decoration: none;
+    background-color: #90B147;
+    border-color: #000000;
+    color: #FFF;
+}
+
+.rightColumn h2
+{
+    font-size: 1.2em;
+    padding: 5px;
+    margin: 0px;
+    border-color: #5C87B2;
+    background-color: #5C87B2;
+    color: #FFF;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+.clear
+{
+    clear: both;
+}
+
+/* Messages,Loading  
+----------------------------------------------------------*/
+.messages
+{
+    word-wrap: break-word; /*自动换行,在FF中对英文和数字无效*/
+    position: fixed !important;
+    position: absolute;
+    max-width: 300px;
+    background-color: #D9F0AA;
+    border:1px solid #A1C665;
+    color: black;
+    padding: 5px;
+    margin: 2px;
+    bottom: 0;
+    right: 0;
+    z-index: 9999;
+    bottom: expression(0+0);
+    display: none;
+}
+
+.loading
+{
+    position: absolute;
+    background: white url("/Views/Images/loading.gif") no-repeat;
+    color: #AA0000;
+    border: 3px solid #A1C665;
+    padding: 2px;
+    display: none;
+    z-index: 9999;
+}
+
+
+/* Register 
+----------------------------------------------------------*/
+.modalBox
+{
+	background:#ffffff none repeat scroll 0%;
+	position:absolute;
+	border:5px solid #333333;
+	z-index:9998;
+	font-size:12px;
+	top : 30%;
+	left : 30%;
+}
+
+.modalBox .titleContainer
+{
+	height: 36px;
+	background-color:#A1C665;
+	color:#ffffff;
+	font-family:"Trebuchet MS",Sans-Serif,Verdana;
+	font-size:18px;
+	font-weight:bolder;
+	padding-left:15px;
+}
+
+.modalBox .title
+{
+	float:left;
+	padding-top:5px;
+}
+
+.modalBox .closeButton
+{
+	float:right;
+	background-image:url(../Images/btnClose.gif);
+	cursor:pointer;
+	width:14px;
+	height:14px;
+	margin: 7px 7px;
+}
+
+.modalBox .contentContainer
+{
+	padding:10px;
+}
+
+.blockBG
+{
+	background-color: black;
+	height: 100%;
+	position: fixed !important;
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	z-index: 1000;
+	filter:alpha(opacity=60);
+	opacity: 0.6;
+}
+.form
+{
+	background: #fff9d7 none no-repeat scroll 0%;
+	border: 1px solid #e2c822;
+	padding: 0 8px 8px 8px;
+}
+
+.form h2
+{
+	border-bottom:1px solid #e2c822;
+	font-size:12px;
+	font-weight:bold;
+	padding-bottom:5px;
+}
+
+.form p
+{
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+.form .label
+{
+	width: 70px;
+	padding-right:2px;
+	padding-top:2px;
+	float: left;
+	clear:left;
+}
+
+.form .textbox
+{
+	width: 280px;
+	border:1px solid #e2c822;
+	font-size:12px;
+	padding:3px;
+}
+
+.form .textarea
+{
+	width: 280px;
+	height:128px;
+	border:1px solid #e2c822;
+	font-size:12px;
+	padding:3px;
+}
+
+.form .largeTextbox
+{
+	width: 480px;
+	border:1px solid #e2c822;
+	font-size:12px;
+	padding:3px;
+}
+
+.form .largeTextarea
+{
+	width: 480px;
+	height:192px;
+	border:1px solid #e2c822;
+	font-size:12px;
+	padding:3px;
+}
+
+.form .button
+{
+	background:#f2f2f2 url(../Views/Images/buttonBG.gif) repeat-x scroll 0%;
+	border:1px solid #999999;
+	padding: 2px 4px 2px 4px;
+}
+
+.form .validator
+{
+	color:#ff0000;
+	padding-left:72px;
+}
+
+.form .smallTextbox
+{
+	border:1px solid #e2c822;
+	font-size:11px;
+	padding:3px;
+	width: 200px;
+}
+
+.form .message
+{
+	padding-left:72px;
+}
+
+/* uLinks List
+----------------------------------------------------------*/
+.linkItem
+{
+    margin: 8px 3px;
+    padding: 2px;
+    width:100%;
+	background:url(../Views/Images/des.gif) no-repeat scroll 3px 35px;
+}
+
+.listeven
+{
+   background-color:#ffffff;
+}
+
+.itemInfo
+{
+    margin-bottom:10px;
+}
+
+.linkTitle
+{
+	display:inline-block;
+    background:#F7F9FB;
+    border:solid 1px #F7F9FB;
+    padding:3px;
+    margin:6px 2px -2px;
+}
+.linkTitleHover
+{
+	border:solid 1px #B2CFEC;
+	cursor:pointer;
+}
+
+.linkDes
+{
+	padding:3px 15px 0 38px;
+}
+
+.linkFoot
+{
+    color: #8D8D8D;
+    text-align:right;
+    margin-top:2px;
+    line-height:normal;
+}
+
+/* pager
+----------------------------------------------------------*/
+.pager
+{
+    margin: 5px;
+    padding: 3px;
+    float: left;
+}
+.pager a{
+	text-decoration: none;
+	background-color: #EDFDCE;
+	border: solid 1px #93BC0C;
+	color: #728D26;
+	padding: 1px 2px 0 2px;
+	font-size: 10pt;
+}
+.pager a:hover{
+	background-color: #93BC0C;
+	border: solid 1px #728D26;
+	color: #ffffff;
+}

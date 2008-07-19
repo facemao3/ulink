@@ -1,0 +1,60 @@
+﻿<div id="divAdduLink" class="modalBox" style="width: 440px;">
+    <div class="titleContainer">
+        <div class="title">
+            uLinks -- 友链</div>
+        <div id="divMembershipClose" class="closeButton AdduLink" title="Close">
+            X</div>
+    </div>
+    <div class="contentContainer">
+        <div id="divRegister">
+            <div class="form">
+                <h2>
+                    添加uLink</h2>
+                <p>
+                    <label for="txtTitle" class="label">
+                        题目:</label>
+                    <input id="txtTitle" type="text" class="textbox" />
+                    <span id="valTitle" class="validator" style="display: none"></span>
+                </p>
+                <p>
+                    <label for="txtURL" class="label">
+                        链接地址:</label>
+                    <input id="txtURL" type="text" class="textbox" />
+                    <span id="valURL" class="validator" style="display: none"></span>
+                </p>
+                <p>
+                    <label for="txtDes" class="label">
+                        简单介绍:</label>
+                    <textarea id="txtDes" class="textarea" ></textarea>
+                    <span id="valDes" class="validator" style="display: none"></span>
+                </p>
+                <p>
+                    <label for="sltCategory" class="label">
+                        所属分类:</label>
+                        <select id="sltCategory">
+                            <option value="0">未分类</option>
+                        </select>
+                    <span id="valCategory" class="validator" style="display: none"></span>
+                </p>
+                <p>
+                    <label for="chkPublic" class="label">
+                        是否公开:</label>
+                    <input id="chkPublic" type="checkbox" checked="checked" />
+                    <span id="valPublic" class="validator" style="display: none"></span>
+                </p>
+                <p>
+                    <label for="chkForever" class="label">
+                        是否永久:</label>
+                    <input id="chkForever" type="checkbox" />
+                    <span id="valForever" class="validator" style="display: none"></span>
+                </p>
+                <span id="registerMessage" class="message" style="display: none"></span>
+                <p>
+                    <label class="label">
+                    </label>
+                    <input id="btnAdduLink" type="button" class="button" value="添加" onclick="javascript:void(0)" />
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
