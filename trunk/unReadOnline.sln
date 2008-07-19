@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "unReadOnline", "unReadOnline\unReadOnline.csproj", "{D4EA9EE2-6347-4717-8394-936C19C2D0D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "..\Demo\Kigg.com\Web\Web.csproj", "{E8E261AA-A4A7-455E-92C8-7D0C80BBF35E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4EA9EE2-6347-4717-8394-936C19C2D0D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4EA9EE2-6347-4717-8394-936C19C2D0D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4EA9EE2-6347-4717-8394-936C19C2D0D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4EA9EE2-6347-4717-8394-936C19C2D0D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8E261AA-A4A7-455E-92C8-7D0C80BBF35E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8E261AA-A4A7-455E-92C8-7D0C80BBF35E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8E261AA-A4A7-455E-92C8-7D0C80BBF35E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8E261AA-A4A7-455E-92C8-7D0C80BBF35E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
