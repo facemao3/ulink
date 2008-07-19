@@ -1,0 +1,78 @@
+#magicbox {
+	margin: 0;
+    width: 100%;
+    color: white;
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+#magicbox a{
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+#magicmenu{
+	position: absolute;
+	right: 0;
+	bottom:-25px;
+}
+#magicbox div, #magicbox p{
+	margin: 0;
+}
+#magicmenu ul{
+	list-style-type: none;
+	margin: 0;
+}
+#magicmenu ul li{
+	display: inline;
+}
+#magicmenu ul li a{
+	display: block;
+	float: right;
+	background: #A1C665;
+	border: 1px solid white;
+	border-top: none;
+	margin-right: 2px;
+	padding: 0 12px 4px 12px;
+	height: 21px;
+	color: white;
+	position: relative;
+}
+#magicmenu{
+	display: none;
+}
+#magiccontent{
+	clear: both;
+	background: black;
+	border-bottom: 1px solid white;
+	color: white;
+}
+#magiccontent div{
+	padding: 3px
+}
+#magicmaxi{
+	border-bottom: 1px solid #A1C665;
+}
+#magicmaxi p
+{
+    margin: 2px;
+}
+#magicmaxi span
+{
+    display: inline;
+}
+#magicmini span
+{
+    padding: 0 4px 0;
+}
+
+/* IE6: Hack pour un scroll sans sautillements */
+html {
+	background : url(null) fixed no-repeat;
+}
+/* IE6: Hack pour emuler la position fixed */
+#magicbox{
+	position: relative;
+	top: expression(offsetParent.scrollTop);
+}

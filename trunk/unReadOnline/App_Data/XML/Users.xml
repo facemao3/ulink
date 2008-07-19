@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Users LastId="5">
+  <User Id="1">
+    <UserName>Admin</UserName>
+    <Password>admin</Password>
+    <Email>post@example.com</Email>
+    <CreateTime>2008-04-07 14:39:40</CreateTime>
+    <LastLoginTime>2007-12-05 20:46:40</LastLoginTime>
+  </User>
+  <User Id="3">
+    <UserName>QLeelulu</UserName>
+    <Password>123456789</Password>
+    <Email>QLeelulu@163.com</Email>
+    <CreateTime>2008-04-07 16:43:46</CreateTime>
+    <LastLoginTime>2008-04-07 16:43:46</LastLoginTime>
+  </User>
+  <User Id="4">
+    <UserName>lulu</UserName>
+    <Password>123456</Password>
+    <Email>lulu@122.com</Email>
+    <CreateTime>2008-04-14 21:56:17</CreateTime>
+    <LastLoginTime>2008-04-14 21:56:17</LastLoginTime>
+  </User>
+  <User Id="5">
+    <UserName>eee</UserName>
+    <Password>eee</Password>
+    <Email>eee@123.com</Email>
+    <CreateTime>2008-04-16 23:43:27</CreateTime>
+    <LastLoginTime>2008-04-16 23:43:27</LastLoginTime>
+  </User>
+</Users>

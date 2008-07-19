@@ -1,0 +1,173 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="unReadOnline.Views.Shared.Site" %>
+<%@ Import Namespace="unReadOnline.Controllers" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>uLinks -- 友链 -- 未读网页在线</title>
+    <script type="text/javascript" src="<%= Page.ResolveClientUrl("~/Handlers/Scripts.ashx")%>?v=<%= unReadOnline.Handlers.ScriptHandler.VersionNo %>"></script>
+    <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
+    <%--<script src="../Views/Scripts/jquery-1.2.3-intellisense.js" type="text/javascript"></script>
+    <script src="../Views/Scripts/topMenu.packed.js" type="text/javascript"></script>
+    <script src="../Views/Scripts/jquery.cookie.js" type="text/javascript"></script>
+    <script src="../Views/Scripts/uLinks.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(function(){
+        
+     });
+    </script>--%>
+</head>
+<body>
+    <div class="page">
+
+        <div id="header">
+        uLinks -- 友链
+        <div id="navigate">
+            <span class="m index">
+                <%= Html.ActionLink<HomeController>(c => c.Index(), "首页")%>
+            </span>
+            
+            <% if (Page.User.Identity.IsAuthenticated)
+               { %>
+                <span class="m myULink">
+                <%= Html.ActionLink<MyULinkController>(c => c.Index(), "我的友链" )%>
+                </span>
+                <span class="m logout">
+                    <a href="javascript:void(0)">退出</a>
+                </span> 
+            <% } else {%>
+            <span class="m login">
+                <a href="javascript:void(0)">登录</a>
+            </span>
+            <span class="m register">
+                <a href="javascript:void(0)">注册</a>
+            </span>
+            <% } %>
+            <span>
+                <%= Html.ActionLink<HomeController>(c => c.About(), "关于")%>
+            </span>
+        </div>
+        </div>
+
+        <div id="mainContent">
+
+            <div class="columnsContainer">
+
+                <div class="leftColumn">
+                    <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server">
+                     </asp:ContentPlaceHolder>
+                
+                    
+                </div><!--/leftColumn-->
+
+                <div class="rightColumn">
+                    <a class="uLink Add" href="javascript:void(0)"><img runat="server" border="0" src="~/Views/Images/AdduLink.gif" /></a><br /><br />
+                    <h2>安装插件到浏览器</h2>
+                    <ul>
+                        <li><a href="#">安装到 遨游</a></li>
+                        <li><a href="#/">安装到 FireFox</a></li>
+                        <li><a href="#">安装到 IE</a></li>
+                        <li><a href="#">安装到 世界之窗</a></li>
+                        <li><a href="http://quickstarts.asp.net/3-5-extensions/mvc/default.aspx">安装到 腾讯TT</a></li>
+                    </ul>
+                </div><!--/rightColumn-->
+
+                <div class="clear">
+                </div>
+
+            </div><!--/columnsContainer-->
+            <br /><br /><br />
+            <div id="footer" >
+                
+                <p>
+                    uLinks &copy; Copyright 2008 PowerBy <a href="http://www.net4.com.cn">Net4 Studio</a>
+                </p>
+            </div><!--/footer-->
+
+        </div><!--/mainContent-->
+
+    </div><!--/page-->
+    
+    <!--/提示信息-->
+    <div class="messages"></div>
+    <!--/Loading-->
+    <span class="loading">&nbsp;&nbsp;&nbsp;&nbsp;<span class="loadingMsg"></span></span>
+    <!--/注册表单-->
+    <div id="divMembershipBox" class="modalBox" style="width:440px;display:none">
+            <div class="titleContainer">
+                <div class="title">uLinks -- 友链</div>
+                <div id="divMembershipClose" class="closeButton" title="Close">X</div>
+            </div>
+            <div class="contentContainer">
+                <div id="divLogin">
+                    <div class="form">
+                        <h2>登录</h2>
+                        <p>
+                            <label for="txtLoginUserName" class="label">用户名:</label>
+                            <input id="txtLoginUserName" type="text" class="textbox" />
+                            <span id="valLoginUserName" class="validator" style="display:none"></span>
+                        </p>
+                        <p>
+                            <label for="txtLoginPassword" class="label">密码:</label>
+                            <input id="txtLoginPassword" type="password" class="textbox" />
+                            <span id="valLoginPassword" class="validator" style="display:none"></span>
+                        </p>
+                        <p>
+                            <label class="label"></label>
+                            <label><input id="chkLoginRememberMe" type="checkbox"/>在本机记住我</label>
+                        </p>
+                        <span id="loginMessage" class="message" style="display:none"></span>
+                        <p>
+                            <label class="label"></label>
+                            <input id="btnLogin" type="button" class="button" value="登录" onclick="javascript:void(0)"/>
+                        </p>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="form">
+                        <h2>忘记密码?</h2>
+                        <p>
+                            <label for="txtForgotEmail" class="label">Email:</label>
+                            <input id="txtForgotEmail" type="text" class="textbox" />
+                            <span id="valForgotEmail"  class="validator" style="display:none"></span>
+                        </p>
+                        <span id="passwordMessage" class="message" style="display:none"></span>
+                        <p>
+                            <label class="label"></label>
+                            <input id="btnPassword" type="button" class="button" value="发送密码" onclick="javascript:void(0)" />
+                        </p>
+                    </div>
+                </div>
+                <div id="divRegister">
+                    <div class="form">
+                        <h2>注册</h2>
+                        <p>
+                            <label for="txtUserName" class="label">用户名:</label>
+                            <input id="txtUserName" type="text" class="textbox" />
+                            <span id="valUserName" class="validator" style="display:none"></span>
+                        </p>
+                        <p>
+                            <label for="txtPassword" class="label">密码:</label>
+                            <input id="txtPassword" type="password" class="textbox" />
+                            <span id="valPassword" class="validator" style="display:none"></span>
+                        </p>
+                        <p>
+                            <label for="txtConfirm" class="label">确认密码:</label>
+                            <input id="txtConfirm" type="password" class="textbox" />
+                            <span id="valConfirm" class="validator" style="display:none"></span>
+                        </p>
+                        <p>
+                            <label for="txtEmail" class="label">Email:</label>
+                            <input id="txtEmail" type="text" class="textbox" />
+                            <span id="valEmail" class="validator" style="display:none"></span>
+                        </p>
+                        <span id="registerMessage" class="message" style="display:none"></span>
+                        <p>
+                            <label class="label"></label>
+                            <input id="btnRegister" type="button" class="button" value="注册" onclick="javascript:void(0)"/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

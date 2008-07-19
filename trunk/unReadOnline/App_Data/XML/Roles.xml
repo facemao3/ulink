@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Roles LastId="5">
+  <Role Id="1">
+    <Name>Administrators</Name>
+    <Users>
+      <User>Admin</User>
+    </Users>
+  </Role>
+  <Role Id="2">
+    <Name>Editors</Name>
+    <Users>
+      <User>Admin</User>
+    </Users>
+  </Role>
+  <Role Id="5">
+    <Name>Members</Name>
+    <Users />
+  </Role>
+</Roles>
