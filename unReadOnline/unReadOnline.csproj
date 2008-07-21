@@ -90,7 +90,11 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MyULinkController.cs" />
+    <Compile Include="Controllers\ThemeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Core\uLinkControllerFactory.cs" />
+    <Compile Include="Core\uLinkViewEngine.cs" />
+    <Compile Include="Core\uLinkViewLocator.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -173,13 +177,33 @@
     <Compile Include="Views\Shared\Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
+    <Compile Include="Views\Simple\Home\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Simple\Home\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Simple\Home\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Simple\Home\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Simple\MyULink\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Simple\MyULink\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Views\Scripts\jquery-1.2.3-intellisense.js" />
-    <None Include="ClassDiagram1.cd" />
-    <None Include="Web.config.mvc" />
+    <Content Include="Config\Site.config" />
     <None Include="Web.config" />
     <Content Include="Content\Site.css" />
     <Content Include="Views\Home\About.aspx" />
@@ -212,6 +236,10 @@
     <Content Include="Views\Scripts\topMenu.packed.js" />
     <Content Include="Views\Scripts\uLinks.js" />
     <Content Include="Views\Shared\Ajax.aspx" />
+    <Content Include="Views\Simple\Home\About.aspx" />
+    <Content Include="Views\Simple\Home\Index.aspx" />
+    <Content Include="Views\Simple\MyULink\AdduLink.htm" />
+    <Content Include="Views\Simple\MyULink\Index.aspx" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
