@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using unReadOnline.Core;
 
 namespace unReadOnline
 {
@@ -63,6 +64,7 @@ namespace unReadOnline
 
         protected void Application_Start(object sender, EventArgs e)
         {
+            ControllerBuilder.Current.SetControllerFactory(typeof(uLinkControllerFactory));
             RegisterRoutesForOld(RouteTable.Routes);
         }
     }

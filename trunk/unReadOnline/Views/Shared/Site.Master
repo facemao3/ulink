@@ -62,6 +62,11 @@
 
                 <div class="rightColumn">
                     <a class="uLink Add" href="javascript:void(0)"><img runat="server" border="0" src="~/Views/Images/AdduLink.gif" /></a><br /><br />
+                    <h2>切换模板</h2>
+                    <ul>
+                        <li><a href="/Theme.mvc/ChangeTheme/Default">默认模板</a></li>
+                        <li><a href="/Theme.mvc/ChangeTheme/Simple">超简答模板</a></li>
+                    </ul>
                     <h2>安装插件到浏览器</h2>
                     <ul>
                         <li><a href="#">安装到 遨游</a></li>
